@@ -3,11 +3,8 @@
     "plugins": [
       {
         "name": "@evmts/ts-plugin",
-        "compiler": {
-          "solcVersion": "0.8.20"
-        },
-        "internalContracts": {
-          "deployments": [
+        "localContracts": {
+          "contracts": [
             {
               "name": "WagmiMintExample",
               "addresses": {

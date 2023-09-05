@@ -1,17 +1,14 @@
-import { WagmiMintExample } from '../contracts/WagmiMintExample.sol'
+import { WagmiMintExample } from '../../contracts/WagmiMintExample.sol'
 import { useReducer } from 'react'
-import { useAccount, useBlockNumber, useChainId, useContractEvent, useNetwork } from 'wagmi'
-import { SupportedChainIds } from '../wagmi'
+import { useAccount, useBlockNumber, useChainId, useContractEvent } from 'wagmi'
 
 export const WagmiEvents = () => {
-	// in future versian of evmts this will work without casting to string
-	const chainId = String(useChainId()) as SupportedChainIds
+	const chainId = useChainId()
 
 	const { address } = useAccount()
 
 	const { data: blockNumber } = useBlockNumber()
 
-	// TODO add types to EVMtsContract type
 	const [events, concatEvents] = useReducer((events: any[], newEvents: any[]) => [...events, ...newEvents], [] as any[])
 
 	/**
