@@ -4,9 +4,8 @@ export default function NavBar() {
   return (
     <>
       <nav className={styles.navContainer}>
-        <div className={styles.homeStyle}>Home</div>
-        <div className={styles.linkStyle}>Fake nav item</div>
-        <div className={styles.linkStyle}>Another nav item</div>
+        <div className={styles.linkStyle}>Inscriptions</div>
+        <div className={styles.linkStyle}>Collections</div>
       </nav>
     </>
   );
